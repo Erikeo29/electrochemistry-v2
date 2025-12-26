@@ -70,7 +70,7 @@ h1, h2, h3 {
 <!-- Bouton retour en haut -->
 <a href="#top" class="back-to-top" title="Retour en haut">&#8679;</a>
 <div id="top"></div>
-"")
+""")
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # --- Chemins ---
@@ -289,7 +289,7 @@ if main_nav == t("gen_home") and cv_nav is None and plating_nav is None:
         res_img = os.path.join(ASSETS_PATH, "cv/png/cv_result_example.png")
         if os.path.exists(res_img):
             st.image(res_img, use_container_width=True)
-        st.write(t("card_cv_text"))
+        st.write(t("card_cv_text")),
         
     with col2:
         st.success(t("card_plating_title"))
@@ -351,10 +351,10 @@ elif cv_nav:
         display_smart_markdown(load_file_content("equations/cv_equations.md"))
     # 6: Lexique
     elif idx == 6:
-        display_smart_markdown(load_file_content("lexique/cv_lexique.md"))
+        display_smart_markdown(load_file_content("lexique/cv_lexique.md")),
     # 7: Histoire
     elif idx == 7:
-        display_smart_markdown(load_file_content("histoire/cv_histoire.md"))
+        display_smart_markdown(load_file_content("histoire/cv_histoire.md")),
 
 # PLATING PAGES
 elif plating_nav:
@@ -374,7 +374,7 @@ elif plating_nav:
         with tabs[0]:
             display_smart_markdown(load_file_content("physics/plating_antigravity.md"))
         with tabs[1]:
-            display_smart_markdown(load_file_content("code/plating_antigravity_code.md")
+            display_smart_markdown(load_file_content("code/plating_antigravity_code.md"))
         with tabs[2]:
              st.info(t("gif_coming_soon"))
              gifs = search_images(os.path.join(ASSETS_PATH, "plating/results"), ['.gif'])
