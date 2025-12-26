@@ -36,7 +36,7 @@ header {visibility: hidden;}
 /* Bouton retour en haut */
 .back-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: 50%;
     right: 30px;
     z-index: 9999;
     background-color: #004b87;
@@ -70,7 +70,7 @@ h1, h2, h3 {
 <!-- Bouton retour en haut -->
 <a href="#top" class="back-to-top" title="Retour en haut">&#8679;</a>
 <div id="top"></div>
-"""
+"")
 st.markdown(custom_css, unsafe_allow_html=True)
 
 # --- Chemins ---
@@ -95,7 +95,7 @@ TRANSLATIONS = {
             "Introduction", "Python (Antigravity)", "Conclusion", 
             "Équations clés", "Lexique", "Un peu d'histoire"
         ],
-        "version_info": "**Version 1.0.0**\nDec 2025\n*EQU Research*\n\n**Nouveautés :**\n- Comparaison FEM vs FVM\n- Simulation Galvanostatique\n- Cartes d'épaisseur 3D\n- Documentation historique",
+        "version_info": """**Version 1.0.1**\nDec 2025\n*EQU*\n\n**Nouveautés :**\n- Documentation code enrichie (imports, détails)\n- Support bilingue FR/EN\n\n**Précédemment (1.0.0) :**\n- Comparaison FEM vs FVM\n- Simulation Galvanostatique""",
         "tabs_cv_python": ["Physique", "Code", "Exemples GIF", "Exemples PNG"],
         "tabs_cv_openfoam": ["Physique", "Configuration", "Résultats"],
         "tabs_plating": ["Physique", "Code", "Exemples GIF", "Exemples PNG"],
@@ -124,7 +124,7 @@ TRANSLATIONS = {
             "Introduction", "Python (Antigravity)", "Conclusion", 
             "Key Equations", "Glossary", "A Bit of History"
         ],
-        "version_info": "**Version 1.0.0**\nDec 2025\n*EQU Research*\n\n**New Features:**\n- FEM vs FVM Comparison\n- Galvanostatic Simulation\n- 3D Thickness Maps\n- Historical Documentation",
+        "version_info": """**Version 1.0.1**\nDec 2025\n*EQU*\n\n**New Features:**\n- Enriched code documentation\n- Bilingual support FR/EN\n\n**Previously (1.0.0):**\n- FEM vs FVM Comparison\n- Galvanostatic Simulation""",
         "tabs_cv_python": ["Physics", "Code", "GIF Examples", "PNG Examples"],
         "tabs_cv_openfoam": ["Physics", "Configuration", "Results"],
         "tabs_plating": ["Physics", "Code", "GIF Examples", "PNG Examples"],
@@ -374,7 +374,7 @@ elif plating_nav:
         with tabs[0]:
             display_smart_markdown(load_file_content("physics/plating_antigravity.md"))
         with tabs[1]:
-            display_smart_markdown(load_file_content("code/plating_antigravity_code.md"))
+            display_smart_markdown(load_file_content("code/plating_antigravity_code.md")
         with tabs[2]:
              st.info(t("gif_coming_soon"))
              gifs = search_images(os.path.join(ASSETS_PATH, "plating/results"), ['.gif'])
